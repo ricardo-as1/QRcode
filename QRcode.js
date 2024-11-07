@@ -10,7 +10,7 @@ function gerarQRCode() {
 
   new QRCode(document.getElementById("qrcode"), {
     text: link,
-    width: 200,
-    height: 200
+    width: 250,
+    height: 250
   });
 }

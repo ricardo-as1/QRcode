@@ -4,16 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QRcode Generator</title>
   <meta name="description" content="QRcode Generator by ricardo-as1">
+  <link rel="icon" href="https://m.media-amazon.com/images/I/61ft+sA-AAL._AC_UF894,1000_QL80_.jpg">
+  <title>QRcode Generator</title>
+  
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 
 <body>
   <h2>QRcode Generator</h2>
-  <label for="link">Digite o link:</label>
-  <input type="text" id="link" placeholder="https://github.com/ricardo-as1">
+  <input type="text" id="link" placeholder="Coloque o link aqui">
   <button onclick="gerarQRCode()">Gerar QRcode</button>
   <div id="qrcode" style="margin-top: 20px;"></div>
   <script src="QRcode.js"></script>

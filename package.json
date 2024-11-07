@@ -1,10 +1,10 @@
 {
   "name": "qrcode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Initial project QRcode Generator",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "start index.html"
   },
   "repository": {
     "type": "git",

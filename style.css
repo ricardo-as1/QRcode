@@ -1,51 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
 body {
   color: #e0e0e0;
-  font-size: 16px;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 50px;
+  font-size: 24px;
+  background-color: #232428;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
   background-color: #232428;
 }
 
-/* Estilo para o título principal */
 h1 {
+  text-align: center;
   color: #e0e0e0;
   margin-bottom: 20px;
 }
 
-/* Estilo para labels */
-label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: bold;
-  color: #e0e0e0;
-}
-
-/* Estilo para inputs de texto e arquivo */
 input[type="text"],
-input[type="file"] {
-  padding: 10px;
-  width: 80%;
-  max-width: 400px;
-  margin: 10px 0;
-}
-
-/* Estilo para textarea */
+input[type="file"],
 textarea {
-  padding: 10px;
+  padding: 12px;
   width: 80%;
   max-width: 400px;
-  margin: 10px 0;
+  margin: 15px 0;
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-/* Estilo para botões */
+input[type="text"]:focus,
+input[type="file"]:focus,
+textarea:focus {
+  border-color: #5171ff;
+  background-color: #444;
+  outline: none;
+}
+
 button {
-  padding: 10px 20px;
+  padding: 12px 24px;
   font-size: 16px;
   cursor: pointer;
+  background-color: #5171ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-/* Estilo para o QR Code */
+button:hover {
+  background-color: #3a54c7;
+}
+
+button:active {
+  background-color: #2d47a0;
+}
+
 #qrcode {
   display: flex;
   flex-direction: column;
@@ -61,7 +84,6 @@ button {
   margin-top: 20px;
 }
 
-/* Estilo para o texto do QR Code */
 #qrcode p {
   font-size: 14px;
   color: #555;
@@ -69,7 +91,6 @@ button {
   text-align: center;
 }
 
-/* Estilo para a imagem do QR Code */
 #qrcode img {
   display: block;
   max-width: 100%;
@@ -79,7 +100,6 @@ button {
   margin-top: 10px;
 }
 
-/* Estilo para o rodapé */
 footer {
   background-color: #232428;
   color: #f5f5f5;
@@ -91,7 +111,6 @@ footer {
   font-size: 14px;
 }
 
-/* Estilo para o link do rodapé */
 footer a {
   margin: 0%;
   color: #5171ff;
