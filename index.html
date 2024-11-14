@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="QRcode Generator by ricardo-as1">
   <link rel="icon" href="https://m.media-amazon.com/images/I/61ft+sA-AAL._AC_UF894,1000_QL80_.jpg">
   <title>QRcode Generator</title>
-  
-  <link rel="stylesheet" href="style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-</head>
 
+  <link rel="stylesheet" href="/src/style.css">
+</head>
 <body>
   <h2>QRcode Generator</h2>
   <input type="text" id="link" placeholder="Coloque o link aqui">
   <button onclick="gerarQRCode()">Gerar QRcode</button>
-  <div id="qrcode" style="margin-top: 20px;"></div>
-  <script src="QRcode.js"></script>
+  <br>
+  <canvas id="qrcode" style="margin-top: 25px;"></canvas>
+
+  <script src="/src/QRcode.js" type="module"></script>
   <footer>
     <p>&copy; 2024 <a href="https://github.com/ricardo-as1">Ricardo</a> - Todos os direitos reservados.</p>
   </footer>
-
 </body>
-
 </html>

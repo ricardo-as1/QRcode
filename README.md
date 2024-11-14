@@ -8,7 +8,7 @@
 <div align="center">
 
 [![Status](https://img.shields.io/badge/Status-Active-success.svg)](https://github.com/ricardo-as1/gerador-qr-code) 
-[![License](https://img.shields.io/badge/license-RIC_1.0-blue.svg)](https://github.com/ricardo-as1/gerador-qr-code/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-RIC_1.0-blue.svg)](https://github.com/ricardo-as1/gerador-qr-code/blob/main/LICENSE)
 
 </div>
 
@@ -48,11 +48,11 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento:
 
 1. Clone o repositório para sua máquina local:
    ```bash
-   git clone https://github.com/seu-usuario/gerador-qr-code.git
+   git clone https://github.com/ricardo-as1/QRcode.git
    ```
 2. Acesse a pasta do projeto:
     ```bash
-    cd gerador-qr-code
+    cd QRcode
     ```
 3. Abra o arquivo `index.html` no seu navegador para começar a usar o gerador de QR Code.
 
