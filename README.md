@@ -7,8 +7,8 @@
 
 <div align="center">
 
-[![Status](https://img.shields.io/badge/Status-Active-success.svg)](https://github.com/ricardo-as1/gerador-qr-code) 
-[![License](https://img.shields.io/badge/License-RIC_1.0-blue.svg)](https://github.com/ricardo-as1/gerador-qr-code/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/Version-0.0.4-sucess?style=plastic.svg)](https://github.com/ricardo-as1/gerador-qr-code) 
+[![License](https://img.shields.io/badge/License-RIC_1.0-blue?style=plastic.svg)](https://github.com/ricardo-as1/gerador-qr-code/blob/main/LICENSE)
 
 </div>
 
