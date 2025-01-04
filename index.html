@@ -1,40 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
+  <!-- Definindo os metadados da página -->
   <meta charset="UTF-8">
-  <link rel="icon" href="https://m.media-amazon.com/images/I/61ft+sA-AAL._AC_UF894,1000_QL80_.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="QRcode Generator by ricardo-as1">
-  <title>QRcode Generator</title>
-  <link rel="stylesheet" href="/src/style.css">
-</head>
-<body>
-  <h2>QRcode Generator</h2>
-  <div class="form">
-    <label for="link">
-      <input class="input" type="text" required="" placeholder="Digite o link aqui..." id="link">
-      <div class="fancy-bg"></div>
-      <div class="search">
-        <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
-          <g>
-            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-          </g>
-        </svg>
-      </div>
-      <button class="close-btn" type="reset" id="clearButton">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-          <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-        </svg>
-      </button>
-    </label>
-  </div>
-  <button onclick="gerarQRCode()">Gerar QRcode</button>
-  <br>
-  <canvas id="qrcode" style="margin-top: 25px;"></canvas>
+  <title>QRCode Generator</title>
 
-  <script src="/src/QRcode.js" type="module"></script>
-  <footer>
-    <p>&copy; 2024 <a href="https://github.com/ricardo-as1">Ricardo</a> - Todos os direitos reservados.</p>
+  <!-- Link para o Tailwind CSS para estilização -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="/Assets/logo.png" rel="icon"> <!-- Logo no favicon -->
+</head>
+<body class="bg-gray-800 text-white font-sans">
+
+  <!-- Cabeçalho da página -->
+  <header class="bg-gray-900 p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="flex items-center">
+        <img src="/Assets/logo.png" alt="Logo" class="w-10 h-10 rounded-r rounded-l"> <!-- Logo -->
+        <button 
+        class="ml-3 text-2xl font-bold text-white py-2 px-4 transition-all" 
+        onclick="window.location.href='/'">
+          QRCode Generator
+        </button>
+      </div>
+      <!-- Navegação -->
+      <nav>
+        <a href="#" class="text-gray-300 hover:text-white mx-2">Home</a>
+        <a href="/Pages/QRCode.html" class="text-gray-300 hover:text-white mx-2">Generate</a>
+        <a href="https://github.com/ricardo-as1" target="_blank" class="text-gray-300 hover:text-white mx-2">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container mx-auto p-6 text-center">
+    <h2 class="text-4xl font-bold mb-4">QRCodes com apenas alguns clicks</h2>
+    <p class="text-gray-400 mb-6">
+      Transforme seus links, texto ou credenciais WiFi em códigos QR com apenas alguns cliques. Compartilhe, baixe e personalize os códigos QR sem esforço.
+    </p>
+    <!-- Botão para começar a gerar QR Codes -->
+    <a href="/Pages/QRCode.html" class="bg-indigo-600 hover:bg-indigo-500 px-6 py-3 rounded text-white text-lg">
+      Começe a gerar QRCodes
+    </a>
+  </main>
+
+  <!-- Seção de Benefícios -->
+  <section class="bg-gray-700 py-10 mt-10 text-center text-gray-300">
+    <div class="container mx-auto grid md:grid-cols-3 gap-6">
+
+      <!-- Benefício Versátil -->
+      <div class="flex flex-col items-center p-6 bg-gray-800 rounded shadow-md text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500 mb-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm8 0h8v8h-8V5zm2 2v4h4V7h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm8 0h8v8h-8v-8zm2 2v4h4v-4h-4z" />
+        </svg>
+        <h3 class="text-xl font-bold mb-2">Versátil</h3>
+        <p class="text-gray-400">Gere QRCodes para Links, Texto, Wifi e muito mais.</p>
+      </div>
+
+      <!-- Benefício Alta Qualidade -->
+      <div class="flex flex-col items-center p-6 bg-gray-800 rounded shadow-md text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500 mb-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm5.93 6.36l-6.6 6.6a1 1 0 01-1.41 0l-3.3-3.3a1 1 0 011.41-1.41l2.59 2.59 5.89-5.89a1 1 0 011.41 1.41z" />
+        </svg>
+        <h3 class="text-xl font-bold mb-2">Alta Qualidade</h3>
+        <p class="text-gray-400">Faça o download do seu código QR nos formatos PNG ou SVG.</p>
+      </div>
+
+      <!-- Benefício Rápido & Fácil -->
+      <div class="flex flex-col items-center p-6 bg-gray-800 rounded shadow-md text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-green-500 mb-4" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 3a9 9 0 100 18 9 9 0 000-18zm-1 13h2v2h-2v-2zm0-10h2v8h-2V6z" />
+        </svg>
+        <h3 class="text-xl font-bold mb-2">Rápido & Fácil</h3>
+        <p class="text-gray-400">Gere códigos instantaneamente com uma interface simples.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="bg-gray-900 text-gray-300 py-4 text-center fixed bottom-0 w-full left-0 z-50">
+    <p>© 2024 QR Code Generator. Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>

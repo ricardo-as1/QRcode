@@ -1,21 +1,21 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://m.media-amazon.com/images/I/61ft+sA-AAL._AC_UF894,1000_QL80_.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="Assets/logo.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">QRcode Generator</h3>
 
 <div align="center">
 
-[![Version](https://img.shields.io/badge/Version-0.0.4-sucess?style=plastic.svg)](https://github.com/ricardo-as1/gerador-qr-code) 
-[![License](https://img.shields.io/badge/License-RIC_1.0-blue?style=plastic.svg)](https://github.com/ricardo-as1/gerador-qr-code/blob/main/LICENSE)
+[![Version](https://img.shields.io/badge/Beta-1.0.0-blue?style=plastic.svg)](https://github.com/ricardo-as1/QRcode) 
+[![License](https://img.shields.io/badge/License-RIC_1.0-blue?style=plastic.svg)](https://github.com/ricardo-as1/QRcode/blob/main/LICENSE)
 
 </div>
 
 ---
 
 <p align="center"> QRcode Generator é uma ferramenta simples para criar QR Codes a partir de links inseridos pelo usuário. Ele gera códigos QR de forma rápida e eficiente. A aplicação é voltada para uso pessoal e educativo, e é protegida por uma Licença Restritiva, que proíbe a distribuição, modificação e venda sem autorização. Ideal para quem precisa criar QR Codes de forma prática e controlada.
-    <br> 
+    <br>
 </p>
 
 ## 📝 Conteúdo
@@ -89,13 +89,13 @@ Para implantar o **QRcode Generator** em um servidor ao vivo, basta seguir as in
 Por exemplo, para **GitHub Pages**, você pode seguir as instruções [aqui](https://docs.github.com/en/pages/getting-started-with-github-pages) para hospedar seu projeto.
 
 ### ⛏️ Construído Com <a name="built_using"></a>
-- HTML/CSS - Estrutura e design da página
-- JavaScript - Funcionalidade para gerar QR Codes
-- QRCode.js - Biblioteca para criação dos QR Codes
+- HTML/CSS - Estrutura e design da página.
+- JavaScript - Funcionalidade para gerar QR Codes.
+- QRCode.js - Biblioteca para criação dos QR Codes.
 
 ### ✍️ Autores <a name="authors"></a>
-[@ricardo-as1](https://github.com/ricardo-as1) - Ideia e desenvolvimento inicial
+[@ricardo-as1](https://github.com/ricardo-as1) - Ideia e desenvolvimento inicial!
 
 ### 🎉 Agradecimentos <a name="acknowledgement"></a>
-- Agradecimento a todos que contribuíram para projetos de QR Code open-source
+- Agradecimento a todos que contribuíram para projetos de QR Code open-source.
 - Referências à documentação de **QRCode.js** para facilitar a integração com a biblioteca.
