@@ -94,7 +94,8 @@ Por exemplo, para **GitHub Pages**, você pode seguir as instruções [aqui](htt
 - QRCode.js - Biblioteca para criação dos QR Codes.
 
 ### ✍️ Autores <a name="authors"></a>
-[@ricardo-as1](https://github.com/ricardo-as1) - Ideia e desenvolvimento inicial!
+[@Ricardo Senna](https://github.com/ricardo-as1) - 👑
+[@Adriel Santos](https://github.com/ADCDS) - 💻
 
 ### 🎉 Agradecimentos <a name="acknowledgement"></a>
 - Agradecimento a todos que contribuíram para projetos de QR Code open-source.
