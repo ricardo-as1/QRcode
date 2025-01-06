@@ -95,6 +95,7 @@ Por exemplo, para **GitHub Pages**, você pode seguir as instruções [aqui](htt
 
 ### ✍️ Autores <a name="authors"></a>
 [@Ricardo Senna](https://github.com/ricardo-as1) - 👑
+<br>
 [@Adriel Santos](https://github.com/ADCDS) - 💻
 
 ### 🎉 Agradecimentos <a name="acknowledgement"></a>
