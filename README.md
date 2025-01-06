@@ -8,7 +8,7 @@
 <div align="center">
 
 [![Version](https://img.shields.io/badge/Beta-1.0.0-blue?style=plastic.svg)](https://github.com/ricardo-as1/QRcode) 
-[![License](https://img.shields.io/badge/License-RIC_1.0-blue?style=plastic.svg)](https://github.com/ricardo-as1/QRcode/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/License-GPL_3.0-blue?style=plastic.svg)](https://github.com/ricardo-as1/QRcode/blob/main/LICENSE)
 
 </div>
 
