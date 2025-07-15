@@ -1,6 +1,6 @@
     import { Canvg } from 'https://cdn.skypack.dev/canvg@^4.0.0';
 
-    let lastQuery = 'https://google.com';
+    let lastQuery = 'https://ricardo-qrcode.web.app/';
     const size = document.getElementById('imgSize');
     const imgType = document.getElementById('imgType');
 
