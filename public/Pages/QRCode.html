@@ -1,101 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <!-- Definindo os metadados da página -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>QRCode Generator - Gerar</title>
 
-  <!-- Link para o Tailwind CSS para estilização -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="/Assets/logo.png" rel="icon"> <!-- Logo no favicon -->
-  <link href="/Src/Styles/QRCodePageStyle.css" rel="stylesheet"> <!-- Estilo customizado -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome para ícones -->
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="/Assets/logo.png" rel="icon" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <link href="/Src/Styles/QRCodePageStyle.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-800 text-white font-sans">
+<body class="bg-gray-900 text-white font-sans min-h-screen flex flex-col overflow-x-hidden">
 
-  <!-- Cabeçalho da página -->
-  <header class="bg-gray-900 p-4">
-    <div class="container mx-auto flex justify-between items-center">
-      <div class="flex items-center">
-        <img src="/Assets/logo.png" alt="Logo" class="w-10 h-10 rounded-r rounded-l"> <!-- Logo -->
-        <button class="ml-3 text-2xl font-bold text-white py-2 px-4 transition-all" onclick="window.location.href='/'">
-          QRCode Generator
-        </button>
-      </div>
-      <!-- Navegação -->
-      <nav>
-        <a href="/index.html" class="text-gray-300 hover:text-white mx-2">Home</a>
-        <a href="#" class="text-gray-300 hover:text-white mx-2">Generate</a>
-        <a href="https://github.com/ricardo-as1" target="_blank" class="text-gray-300 hover:text-white mx-2">GitHub</a>
-      </nav>
+  <!-- Sidebar (Desktop) -->
+  <aside class="hidden md:flex flex-col w-64 h-screen bg-gray-800 backdrop-blur bg-opacity-20 p-6 fixed left-0 top-0 shadow-lg z-30">
+    <div class="flex items-center mb-10">
+      <img src="/Assets/logo.png" class="w-10 h-10 rounded" alt="Logo" />
+      <h1 class="ml-3 text-2xl font-bold">QRCode</h1>
     </div>
-  </header>
+
+    <nav class="flex flex-col space-y-4 text-sm">
+      <a href="/" class="flex items-center text-gray-300 hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6" />
+        </svg>
+        Início
+      </a>
+
+      <a href="/Pages/QRCode.html" class="flex items-center text-gray-300 hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h4v4H4V4zm0 6h4v4H4v-4zm6-6h4v4h-4V4zm6 0h4v4h-4V4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zm0-6h4v4h-4v-4z" />
+        </svg>
+        Gerar QR Code
+      </a>
+
+      <a href="https://github.com/ricardo-as1/QRcode/tree/main" target="_blank" class="flex items-center text-gray-300 hover:text-white transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-3 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.799 8.205 11.387.6.111.82-.261.82-.579v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.547-1.387-1.337-1.757-1.337-1.757-1.092-.746.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.335-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.116-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.004 2.047.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.241 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.624-5.475 5.921.43.371.823 1.103.823 2.222v3.293c0 .32.218.694.825.577C20.565 21.796 24 17.297 24 12 24 5.37 18.63 0 12 0z"/>
+        </svg>
+        GitHub
+      </a>
+    </nav>
+
+    <div class="mt-auto text-gray-300 text-xs text-center select-none">
+      © 2024 ricardo-as1
+    </div>
+  </aside>
+
+  <!-- Menu Mobile -->
+  <div class="md:hidden flex items-center justify-between bg-gray-800 p-4 fixed top-0 left-0 right-0 z-50 shadow-lg">
+    <div class="flex items-center">
+      <img src="/Assets/logo.png" class="w-8 h-8 rounded" alt="Logo" />
+      <span class="ml-2 font-bold text-lg">QRCode Generator</span>
+    </div>
+    <button onclick="toggleMenu()" class="text-white focus:outline-none text-2xl" aria-label="Abrir menu mobile">
+      ☰
+    </button>
+  </div>
+
+  <!-- Dropdown Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden fixed top-16 left-0 right-0 bg-gray-800 z-40 flex flex-col p-4 space-y-4 shadow-md max-h-[calc(100vh-4rem)] overflow-auto">
+    <a href="/" class="flex items-center text-gray-300 hover:text-white transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6" />
+      </svg>
+      Início
+    </a>
+    <a href="/Pages/QRCode.html" class="flex items-center text-gray-300 hover:text-white transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4h4v4H4V4zm0 6h4v4H4v-4zm6-6h4v4h-4V4zm6 0h4v4h-4V4zM4 16h4v4H4v-4zm6 0h4v4h-4v-4zm6 0h4v4h-4v-4zm0-6h4v4h-4v-4z" />
+      </svg>
+      Gerar QR Code
+    </a>
+    <a href="https://github.com/ricardo-as1/QRcode/tree/main" target="_blank" class="flex items-center text-gray-300 hover:text-white transition">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.799 8.205 11.387.6.111.82-.261.82-.579v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.547-1.387-1.337-1.757-1.337-1.757-1.092-.746.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.305-5.466-1.335-5.466-5.931 0-1.31.469-2.381 1.236-3.221-.124-.303-.536-1.524.116-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.004 2.047.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.653 1.653.241 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.61-2.804 5.624-5.475 5.921.43.371.823 1.103.823 2.222v3.293c0 .32.218.694.825.577C20.565 21.796 24 17.297 24 12 24 5.37 18.63 0 12 0z"/>
+      </svg>
+      GitHub
+    </a>
+  </div>
 
   <!-- Conteúdo Principal -->
-  <main class="container mx-auto p-6">
-    <div class="bg-gray-700 p-8 rounded shadow-lg max-w-lg mx-auto">
-      <h2 class="text-2xl font-bold mb-6 text-center">Gere seu Código QR</h2>
+  <main class="flex-grow ml-0 md:ml-64 p-8 flex justify-center items-start min-h-[calc(100vh-4rem)] max-w-full">
+    <section class="bg-gray-800 rounded-2xl shadow-xl p-10 max-w-xl w-full">
+      <h2 class="text-4xl font-extrabold mb-8 text-center tracking-wide text-indigo-400 drop-shadow-lg">
+        Gere seu QRCode
+      </h2>
 
-      <!-- Input para Texto ou Link -->
-      <div class="mb-6">
-        <label for="linkBox" class="block text-gray-300 font-semibold mb-2">Conteúdo (Texto ou Link)</label>
-        <div class="flex">
-          <input type="text" id="linkBox" placeholder="Digite o conteúdo aqui" value="https://google.com" class="flex-1 p-3 bg-gray-800 text-white rounded-l focus:outline-none">
-          <button id="genBtn" class="bg-indigo-600 hover:bg-indigo-500 px-4 rounded-r text-white">Gerar</button>
+      <!-- Texto ou Link -->
+      <div class="mb-8">
+        <label for="linkBox" class="block text-gray-300 font-semibold mb-3 text-lg">• Digite o Texto ou Link</label>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <input
+            type="text"
+            id="linkBox"
+            placeholder="Digite o conteúdo aqui"
+            value="https://google.com"
+            class="flex-1 p-4 rounded-xl bg-gray-900 bg-opacity-25 text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+            aria-label="Campo para digitar texto ou link"
+          />
+          <button
+            id="genBtn"
+            class="w-full sm:w-auto bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-indigo-600 text-white font-bold py-4 px-8 rounded-xl shadow-lg transition"
+            aria-label="Gerar QR Code do conteúdo"
+          >
+            Gerar
+          </button>
         </div>
       </div>
 
-      <!-- Input para WiFi -->
-      <div class="mb-6">
-        <label class="block text-gray-300 font-semibold mb-2">Informações de WiFi</label>
-
-        <!-- Campo para SSID e Senha -->
-        <div class="flex mb-3">
-          <input type="text" id="ssidBox" placeholder="SSID (Nome)" class="flex-1 p-3 bg-gray-800 text-white rounded-l focus:outline-none">
-          
-          <!-- Campo de Senha com ícone dentro -->
-          <div class="relative">
-            <input type="password" id="pwdBox" placeholder="Senha" class="flex-1 p-3 bg-gray-800 text-white rounded-r focus:outline-none">
-            <!-- Ícone de olho dentro do campo de senha -->
-            <i id="eyeIcon" class="fas fa-eye text-gray-400 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer pl-3"></i>
+      <!-- WiFi -->
+      <div class="mb-10">
+        <label class="block text-gray-300 font-semibold mb-4 text-lg">• Informações de WiFi</label>
+        <div class="flex flex-col sm:flex-row gap-4 mb-4">
+          <input
+            type="text"
+            id="ssidBox"
+            placeholder="SSID (Nome)"
+            class="bg-opacity-25 flex-1 p-4 rounded-xl bg-gray-900 text-white placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+            aria-label="Campo para digitar SSID"
+          />
+          <div class="relative flex-1">
+            <input
+              type="password"
+              id="pwdBox"
+              placeholder="Senha"
+              class="bg-opacity-25 p-4 rounded-xl bg-gray-900 text-white placeholder-gray-400 w-full pr-12 focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+              aria-label="Campo para digitar senha WiFi"
+            />
+            <i
+              id="eyeIcon"
+              class="fas fa-eye text-gray-400 absolute right-4 top-1/2 transform -translate-y-1/2 cursor-pointer hover:text-indigo-400 transition"
+              title="Mostrar/Ocultar senha"
+              role="button"
+              tabindex="0"
+              aria-pressed="false"
+              aria-label="Mostrar ou ocultar senha"
+            ></i>
           </div>
         </div>
-
-        <!-- Botão para gerar QR Code de WiFi -->
-        <button id="genWifiBtn" class="w-full bg-indigo-600 hover:bg-indigo-500 py-2 rounded text-white">Gerar QR de WiFi</button>
+        <button
+          id="genWifiBtn"
+          class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-purple-600 hover:to-indigo-600 text-white font-bold py-4 rounded-xl shadow-lg transition"
+          aria-label="Gerar QR Code do WiFi"
+        >
+          Gerar QR de WiFi
+        </button>
       </div>
 
-      <!-- Exibição do QRCode gerado -->
-      <div id="qrcode" class="flex justify-center items-center bg-gray-800 p-4 rounded mb-6"></div>
+      <!-- QRCode Image -->
+      <div
+        id="qrcode"
+        class="flex justify-center items-center bg-gray-900 bg-opacity-25 p-6 rounded-2xl mb-8 max-w-full overflow-auto shadow-inner"
+        aria-label="QRCode gerado"
+      ></div>
 
-      <!-- Opções de Download -->
-      <div class="flex flex-wrap gap-4 justify-center">
-        <!-- Tamanho da imagem -->
-        <select id="imgSize" class="bg-gray-900 text-white py-2 px-3 rounded mr-4">
+      <!-- Download -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <select
+          id="imgSize"
+          class="bg-gray-900 text-white py-3 px-5 rounded-xl w-full sm:w-auto cursor-pointer focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+          aria-label="Selecionar tamanho da imagem"
+        >
           <option value="256">256px</option>
-          <option value="512">512px</option>
+          <option value="512" selected>512px</option>
           <option value="1024">1024px</option>
           <option value="2048">2048px</option>
         </select>
-        <!-- Tipo de imagem (PNG ou SVG) -->
-        <select id="imgType" class="bg-gray-900 text-white py-2 px-3 rounded">
-          <option value="png">PNG</option>
+
+        <select
+          id="imgType"
+          class="bg-gray-900 text-white py-3 px-5 rounded-xl w-full sm:w-auto cursor-pointer focus:outline-none focus:ring-4 focus:ring-indigo-500 transition"
+          aria-label="Selecionar tipo de imagem"
+        >
+          <option value="png" selected>PNG</option>
           <option value="svg">SVG</option>
         </select>
-        <!-- Botão para Download -->
-        <button id="downloadBtn" class="bg-blue-600 hover:bg-blue-500 py-2 px-6 rounded text-white">Download</button>
+
+        <button
+          id="downloadBtn"
+          class="bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 px-8 rounded-xl shadow-lg transition"
+          aria-label="Botão para baixar QR Code"
+        >
+          Download
+        </button>
       </div>
-    </div>
+    </section>
   </main>
 
-  <!-- Rodapé -->
-  <footer class="bg-gray-900 text-gray-300 py-4 text-center fixed bottom-0 w-full left-0">
-    <p>© 2024 QR Code Generator. Todos os direitos reservados.</p>
-  </footer>
 
   <!-- Scripts -->
-  <script src="/Src/lib/qrcode.min.js"></script> <!-- Biblioteca para gerar QR Code -->
-  <script type="module" src="/Src/Scripts/QRCodePageMainJS.js"></script> <!-- Script principal -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+    }
+  </script>
+  <script src="/Src/lib/qrcode.min.js"></script>
+  <script type="module" src="/Src/Scripts/QRCodePageMainJS.js"></script>
 </body>
 </html>

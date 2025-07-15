@@ -22,7 +22,7 @@ function genPng(val) {
     canvas.height = size.value;
 
     const ctx = canvas.getContext('2d');
-    const svg = genSvg(val);
+    const svg = genSvg(val)
 
     const rend = Canvg.fromString(ctx, svg);
     rend.start();

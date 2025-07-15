@@ -1,6 +1,6 @@
 {
   "name": "qrcode",
-  "version": "v1.0.0-beta",
+  "version": "v2.0.0-beta",
   "description": "Initial project QRcode Generator",
   "private": true,
   "main": "index.html",
